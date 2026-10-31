@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "repositoryId": 1440689606,
+  "defaultBranch": "main",
+  "workflowId": 402624393,
+  "runId": 41189837760,
+  "runAttempt": 1,
+  "controllerSha": "a828da9c47cc48a95348941389f7780195a8bb16",
+  "firstCommitSha": "1d2f57eb16678747dc9998971367e66965295cf3",
+  "phase": "RESTORED",
+  "affectedRules": [
+    {
+      "ruleId": 26266509,
+      "excludedRepository": "steward-e08-bootstrap",
+      "originalConditionsDigest": "12d4731fcc6512aae12415ba610c40502aa5775ee5129ef6a46f5a1c30c7385f",
+      "alreadyExcluded": false,
+      "lastWrittenConditionsDigest": "12d4731fcc6512aae12415ba610c40502aa5775ee5129ef6a46f5a1c30c7385f",
+      "observedAt": "2026-10-31T09:54:52.521Z"
+    }
+  ],
+  "firstCommitOrigin": "external"
+}
