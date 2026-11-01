@@ -1,0 +1,12 @@
+name: E08 Renovate image reference
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixture:
+    runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/renovatebot/renovate:44.181.3@sha256:00f4f69be3060d6ad1ff3481a0e44490aba37ab17c501cbf2de179bc3751dc78
+    steps:
+      - run: renovate --version

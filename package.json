@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test test/dependency.test.mjs",
-    "typecheck": "node --check src/fixture.mjs && node --check test/dependency.test.mjs",
+    "typecheck": "node --check src/fixture.mjs && node --check test/dependency.test.mjs && node --check test/consume-upstream.mjs",
     "verify:config": "node test/verify-lock.mjs",
     "verify:dist": "node src/fixture.mjs"
   },
