@@ -15,10 +15,9 @@ if(mode==='image'){
  const text=await readFile('.github/workflows/settings-sync.yml','utf8');
  const match=/ref: ([a-f0-9]{40}) # (\d+\.\d+\.\d+)/.exec(text);assert.ok(match);
  const [_,sha,tag]=match;
- const api=path=>JSON.parse(execFileSync('gh',['api','--method','GET',path],{encoding:'utf8'}));
- let object=api('repos/github-community-projects/safe-settings/git/ref/tags/'+tag).object;
- for(let i=0;object.type==='tag'&&i<4;i++)object=api('repos/github-community-projects/safe-settings/git/tags/'+object.sha).object;
- assert.equal(object.type,'commit');assert.equal(object.sha,sha);
+ const ref='refs/tags/'+tag;
+ const refs=new Map(execFileSync('git',['ls-remote','--tags','https://github.com/github-community-projects/safe-settings.git',ref,ref+'^{}'],{encoding:'utf8'}).trim().split('\n').map(line=>{const [oid,name]=line.trim().split(/\s+/);return [name,oid];}));
+ assert.equal(refs.get(ref+'^{}')??refs.get(ref),sha);
  const target=await mkdtemp(join(tmpdir(),'e08-safe-settings-'));
  const git=(...args)=>execFileSync('git',['-c','core.hooksPath=','-c','credential.helper=',...args],{cwd:target,stdio:['ignore','ignore','pipe']});
  git('init');git('remote','add','origin','https://github.com/github-community-projects/safe-settings.git');git('fetch','--depth=1','origin',sha);git('checkout','--detach','FETCH_HEAD');
