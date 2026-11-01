@@ -88,6 +88,21 @@
         "github-runner"
       ],
       "enabled": false
+    },
+    {
+      "matchManagers": [
+        "mise"
+      ],
+      "matchPackageNames": [
+        "pypi:pyflakes"
+      ],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "prPriority": 1000
     }
   ],
   "customManagers": [
@@ -116,5 +131,8 @@
     ".github/workflows/e08-validation.yml",
     ".github/workflows/steward-release-channels.yml",
     ".github/workflows/steward-release-publish.yml"
-  ]
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": false
+  }
 }
