@@ -1,0 +1,13 @@
+name: E08 Validation
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validation:
+    name: E08 Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate isolated fixture
+        run: echo 'E08 synthetic source fixture'

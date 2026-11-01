@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "units": [
+    {
+      "id": "fixture",
+      "path": ".",
+      "notesPath": ".release-notes/fixture.md",
+      "assets": [
+        {
+          "id": "fixture",
+          "name": "fixture-${version}.zip",
+          "mediaType": "application/zip"
+        }
+      ],
+      "channels": []
+    }
+  ],
+  "repositoryAuthors": [
+    {
+      "id": 44151430,
+      "evidence": "E08 synthetic fixture authored by the authenticated axiomoth account; not a production authorship change."
+    }
+  ]
+}
