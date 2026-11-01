@@ -88,6 +88,21 @@
         "github-runner"
       ],
       "enabled": false
+    },
+    {
+      "matchManagers": [
+        "mise"
+      ],
+      "matchPackageNames": [
+        "pyflakes"
+      ],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "prPriority": 1000
     }
   ],
   "customManagers": [
