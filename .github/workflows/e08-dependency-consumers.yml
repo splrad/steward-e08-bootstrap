@@ -49,6 +49,9 @@ jobs:
       - name: Consume locked Copier dependency
         shell: bash
         run: mise exec --locked -- uv run --locked --project tools/template python tools/template/smoke.py
+      - name: Execute locked tools and reject invalid Python
+        shell: bash
+        run: mise exec --locked -- node test/consume-tools.mjs
       - name: Consume locked NuGet dependency
         shell: bash
         run: |
