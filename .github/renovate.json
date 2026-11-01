@@ -94,7 +94,7 @@
         "mise"
       ],
       "matchPackageNames": [
-        "pypi:pyflakes"
+        "pyflakes"
       ],
       "enabled": false
     },
