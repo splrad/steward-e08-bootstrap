@@ -3,7 +3,7 @@ node = "core:node"
 npm = "npm:npm"
 
 [tools]
-node = "latest"
+node = "24.15.0"
 npm = "latest"
 "github:jdx/jactionlint" = "latest"
 "aqua:koalaman/shellcheck" = "latest"

@@ -54,6 +54,22 @@ jobs:
         run: |
           dotnet restore fixtures/nuget/Fixture.csproj --locked-mode
           dotnet run --project fixtures/nuget/Fixture.csproj --no-restore --configuration Release
+      - name: Consume safe-settings and native Probot lock
+        shell: bash
+        run: |
+          target=$(mise exec --locked -- node test/consume-upstream.mjs prepare-settings)
+          mise exec --locked -- npm --prefix "$target" ci --ignore-scripts --no-audit --no-fund
+          mise exec --locked -- node test/consume-upstream.mjs verify-settings "$target"
+      - name: Consume pinned Renovate image
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          image=$(mise exec --locked -- node test/consume-upstream.mjs image)
+          version=${image#*:}
+          version=${version%@*}
+          actual=$(docker run --rm --network none --entrypoint renovate "$image" --version)
+          test "$actual" = "$version"
+          printf 'Renovate image version=%s result=PASS\n' "$actual"
       - name: Preserve source and locks
         shell: bash
         run: |
