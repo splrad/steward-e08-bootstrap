@@ -11,5 +11,5 @@ jobs:
         with:
           repository: github-community-projects/safe-settings
           # renovate: datasource=github-tags depName=github-community-projects/safe-settings
-          ref: ff7a65655d33006b9820479df0a9e1057a8927e4 # 2.1.17
+          ref: 3d61f1f44c78ce40ec1e58120250193ebae7787b # 2.1.21
           persist-credentials: false
