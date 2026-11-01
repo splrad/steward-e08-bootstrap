@@ -1,0 +1,27 @@
+{
+  "id": "pr-4-11afb91b7c5c5bb6a9041b4574e763fa1f51960d",
+  "prNumber": 4,
+  "sourceSha": "11afb91b7c5c5bb6a9041b4574e763fa1f51960d",
+  "controllerSha": "d89aaffa0d0f22e1f8c4d5d160b43da4c7e3262e",
+  "deliveryConfigSha": "da72df81fc7863435c2437aed50690a67ae7953d",
+  "units": [
+    {
+      "id": "fixture",
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "releaseId": null,
+      "assets": [],
+      "notesDigest": null,
+      "manifestDigest": null
+    }
+  ],
+  "requiredChannels": [],
+  "dispatches": [],
+  "publications": [],
+  "channelFacts": [],
+  "executionEvidence": [],
+  "completionObservations": [],
+  "completedEvidencePath": null,
+  "repairOf": null,
+  "approvedRepairDecision": null
+}

@@ -2,14 +2,14 @@
   "schemaVersion": 3,
   "repositoryId": 1440689606,
   "defaultBranch": "main",
-  "revision": 18,
+  "revision": 19,
   "releaseAdoption": {
     "sourceSha": "22c995594d2d7640260e399f74ea07b5e96c45d0",
     "prNumber": 2
   },
   "lastObservedDefaultSha": "22c995594d2d7640260e399f74ea07b5e96c45d0",
   "lastCompletedCycleId": null,
-  "activeCycleId": null,
+  "activeCycleId": "pr-4-11afb91b7c5c5bb6a9041b4574e763fa1f51960d",
   "candidate": {
     "id": "8cf04de433e40e7810f562f4468a08a360394eda2b454a46602ddfe5a858c2db",
     "prNumber": 4,
@@ -25,6 +25,6 @@
     "pendingWrite": null
   },
   "nextCheckAt": null,
-  "lastProgressAt": "2026-11-01T02:08:43.205Z",
+  "lastProgressAt": "2026-11-01T02:11:25.839Z",
   "lastErrorCode": null
 }
