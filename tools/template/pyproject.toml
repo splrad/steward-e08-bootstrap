@@ -2,6 +2,6 @@
 name = "e08-copier-update-fixture"
 version = "0.0.0"
 requires-python = ">=3.12"
-dependencies = ["copier==9.18.1"]
+dependencies = ["copier==9.19.1"]
 [tool.uv]
 package = false
