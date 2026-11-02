@@ -42,17 +42,32 @@
         ]
       },
       "configVersion": "e08-native-independent-v1",
-      "result": null,
+      "result": {
+        "sourceCommentId": "annotation:125107279815:0:e09848a95c595e16506e0d34d816f85713dd99d3865c94b2c744b938475d5799",
+        "sourceCommit": "bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+        "sourceUrl": "https://github.com/splrad/steward-e08-bootstrap/runs/125107279815",
+        "severity": "notice",
+        "segmentIndex": 0,
+        "originalIdentifiers": [
+          "E08"
+        ],
+        "problemZh": "这是用于验证中文说明缓存和原生 Check 回读的合成发现。",
+        "impactZh": "影响仅限 E08 隔离验收。",
+        "suggestionZh": "保留源记录，并核对自身 Check 与缓存的回读结果。"
+      },
       "attempts": [
         {
           "startedAt": "2026-11-02T05:34:30.370Z",
-          "status": "UNKNOWN",
-          "model": null,
-          "usage": null
+          "status": "COMPLETE",
+          "model": "e08-fixed-translation-fixture",
+          "usage": {
+            "inputTokens": 0,
+            "outputTokens": 0
+          }
         }
       ],
-      "nextCheckAt": "2026-11-02T05:35:30.370Z",
-      "errorCode": "RESPONSE_UNKNOWN"
+      "nextCheckAt": null,
+      "errorCode": null
     },
     "a17f187f9e589f0580bc154757398d128926cb6ea6073b93c15e06824b5bbfcc": {
       "key": "a17f187f9e589f0580bc154757398d128926cb6ea6073b93c15e06824b5bbfcc",
@@ -68,17 +83,32 @@
         ]
       },
       "configVersion": "e08-native-independent-v1",
-      "result": null,
+      "result": {
+        "sourceCommentId": "annotation:125107279815:0:e09848a95c595e16506e0d34d816f85713dd99d3865c94b2c744b938475d5799",
+        "sourceCommit": "bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+        "sourceUrl": "https://github.com/splrad/steward-e08-bootstrap/runs/125107279815",
+        "severity": "notice",
+        "segmentIndex": 1,
+        "originalIdentifiers": [
+          "README"
+        ],
+        "problemZh": "这是用于验证中文说明缓存和原生 Check 回读的合成发现。",
+        "impactZh": "影响仅限 E08 隔离验收。",
+        "suggestionZh": "保留源记录，并核对自身 Check 与缓存的回读结果。"
+      },
       "attempts": [
         {
           "startedAt": "2026-11-02T05:34:30.370Z",
-          "status": "UNKNOWN",
-          "model": null,
-          "usage": null
+          "status": "COMPLETE",
+          "model": "e08-fixed-translation-fixture",
+          "usage": {
+            "inputTokens": 0,
+            "outputTokens": 0
+          }
         }
       ],
-      "nextCheckAt": "2026-11-02T05:35:30.370Z",
-      "errorCode": "RESPONSE_UNKNOWN"
+      "nextCheckAt": null,
+      "errorCode": null
     },
     "e88d66aa712c0c9118a187b6551e15f353a3f797ff052c3f645d836cc47e657d": {
       "key": "e88d66aa712c0c9118a187b6551e15f353a3f797ff052c3f645d836cc47e657d",
@@ -94,17 +124,32 @@
         ]
       },
       "configVersion": "e08-native-independent-v1",
-      "result": null,
+      "result": {
+        "sourceCommentId": "annotation:125107279815:0:e09848a95c595e16506e0d34d816f85713dd99d3865c94b2c744b938475d5799",
+        "sourceCommit": "bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+        "sourceUrl": "https://github.com/splrad/steward-e08-bootstrap/runs/125107279815",
+        "severity": "notice",
+        "segmentIndex": 2,
+        "originalIdentifiers": [
+          "E08"
+        ],
+        "problemZh": "这是用于验证中文说明缓存和原生 Check 回读的合成发现。",
+        "impactZh": "影响仅限 E08 隔离验收。",
+        "suggestionZh": "保留源记录，并核对自身 Check 与缓存的回读结果。"
+      },
       "attempts": [
         {
           "startedAt": "2026-11-02T05:34:30.370Z",
-          "status": "UNKNOWN",
-          "model": null,
-          "usage": null
+          "status": "COMPLETE",
+          "model": "e08-fixed-translation-fixture",
+          "usage": {
+            "inputTokens": 0,
+            "outputTokens": 0
+          }
         }
       ],
-      "nextCheckAt": "2026-11-02T05:35:30.370Z",
-      "errorCode": "RESPONSE_UNKNOWN"
+      "nextCheckAt": null,
+      "errorCode": null
     }
   },
   "cursor": 0
