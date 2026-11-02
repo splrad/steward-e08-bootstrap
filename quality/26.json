@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "repositoryId": 1440689606,
+  "pullRequestNumber": 26,
+  "currentHead": "bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+  "configVersion": "e08-native-independent-v1",
+  "heads": {
+    "bfaf6b65bfe46be68dba65fdfb79fe816773f039": {
+      "sourceSetDigest": "b90101d1d3fd05e3686996903460c26ba92782e294e18a08f9251ca03aadc2a3",
+      "sources": [
+        {
+          "sourceCommentId": "annotation:125107279815:0:e09848a95c595e16506e0d34d816f85713dd99d3865c94b2c744b938475d5799",
+          "sourceCommit": "bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+          "sourceUrl": "https://github.com/splrad/steward-e08-bootstrap/runs/125107279815",
+          "severity": "notice",
+          "bodyMarkdown": "E08 synthetic finding\n\nREADME.md:1-1\n\nThis synthetic finding tests the Chinese summary cache and native Check readback. Its impact is limited to E08 isolation. Preserve the source record and verify the owned Check and cache.",
+          "updatedAt": "2026-11-02T05:12:47Z"
+        }
+      ],
+      "keys": [
+        "a782ddc02f616fd82a403920a43f2b32ce7bc18bfe322f02276190c4fe38b994",
+        "a17f187f9e589f0580bc154757398d128926cb6ea6073b93c15e06824b5bbfcc",
+        "e88d66aa712c0c9118a187b6551e15f353a3f797ff052c3f645d836cc47e657d"
+      ],
+      "checkId": null,
+      "externalId": "splrad-quality:1440689606:26:bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+      "observedAt": "2026-11-02T05:34:27.843Z"
+    }
+  },
+  "entries": {
+    "a782ddc02f616fd82a403920a43f2b32ce7bc18bfe322f02276190c4fe38b994": {
+      "key": "a782ddc02f616fd82a403920a43f2b32ce7bc18bfe322f02276190c4fe38b994",
+      "segment": {
+        "sourceCommentId": "annotation:125107279815:0:e09848a95c595e16506e0d34d816f85713dd99d3865c94b2c744b938475d5799",
+        "sourceCommit": "bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+        "sourceUrl": "https://github.com/splrad/steward-e08-bootstrap/runs/125107279815",
+        "severity": "notice",
+        "bodyMarkdown": "E08 synthetic finding",
+        "segmentIndex": 0,
+        "originalIdentifiers": [
+          "E08"
+        ]
+      },
+      "configVersion": "e08-native-independent-v1",
+      "result": null,
+      "attempts": [],
+      "nextCheckAt": null,
+      "errorCode": null
+    },
+    "a17f187f9e589f0580bc154757398d128926cb6ea6073b93c15e06824b5bbfcc": {
+      "key": "a17f187f9e589f0580bc154757398d128926cb6ea6073b93c15e06824b5bbfcc",
+      "segment": {
+        "sourceCommentId": "annotation:125107279815:0:e09848a95c595e16506e0d34d816f85713dd99d3865c94b2c744b938475d5799",
+        "sourceCommit": "bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+        "sourceUrl": "https://github.com/splrad/steward-e08-bootstrap/runs/125107279815",
+        "severity": "notice",
+        "bodyMarkdown": "README.md:1-1",
+        "segmentIndex": 1,
+        "originalIdentifiers": [
+          "README"
+        ]
+      },
+      "configVersion": "e08-native-independent-v1",
+      "result": null,
+      "attempts": [],
+      "nextCheckAt": null,
+      "errorCode": null
+    },
+    "e88d66aa712c0c9118a187b6551e15f353a3f797ff052c3f645d836cc47e657d": {
+      "key": "e88d66aa712c0c9118a187b6551e15f353a3f797ff052c3f645d836cc47e657d",
+      "segment": {
+        "sourceCommentId": "annotation:125107279815:0:e09848a95c595e16506e0d34d816f85713dd99d3865c94b2c744b938475d5799",
+        "sourceCommit": "bfaf6b65bfe46be68dba65fdfb79fe816773f039",
+        "sourceUrl": "https://github.com/splrad/steward-e08-bootstrap/runs/125107279815",
+        "severity": "notice",
+        "bodyMarkdown": "This synthetic finding tests the Chinese summary cache and native Check readback. Its impact is limited to E08 isolation. Preserve the source record and verify the owned Check and cache.",
+        "segmentIndex": 2,
+        "originalIdentifiers": [
+          "E08"
+        ]
+      },
+      "configVersion": "e08-native-independent-v1",
+      "result": null,
+      "attempts": [],
+      "nextCheckAt": null,
+      "errorCode": null
+    }
+  },
+  "cursor": 0
+}
