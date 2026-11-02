@@ -1,0 +1,80 @@
+name: E08 Dependency Consumers
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  consume:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: $/.github/actions/e08-checkout
+      - name: Assert Dependabot private credentials are absent
+        shell: bash
+        env:
+          RELEASE_KEY_PRESENT: ${{ secrets.STEWARD_APP_PRIVATE_KEY != '' }}
+          GOVERNANCE_KEY_PRESENT: ${{ secrets.GOVERNANCE_APP_PRIVATE_KEY != '' }}
+        run: test "$RELEASE_KEY_PRESENT" = false && test "$GOVERNANCE_KEY_PRESENT" = false
+      - uses: jdx/mise-action@6be3c7ed4c21d4f76b208d351d95aac273ebb76d # v5.2.4
+        env:
+          MISE_SAFE: '1'
+          MISE_NODE_COMPILE: 'false'
+        with:
+          version: 2026.10.24
+          install_args: --locked
+          env: false
+          cache: false
+          persist_github_token: false
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+        with:
+          global-json-file: global.json
+      - name: Consume locked npm dependency
+        shell: bash
+        run: |
+          mise exec --locked -- npm ci --ignore-scripts --no-audit --no-fund
+          mise exec --locked -- npm test
+          mise exec --locked -- npm run typecheck
+          mise exec --locked -- npm run verify:config
+          mise exec --locked -- npm run verify:dist
+      - name: Consume locked Copier dependency
+        shell: bash
+        run: mise exec --locked -- uv run --locked --project tools/template python tools/template/smoke.py
+      - name: Execute locked tools and reject invalid Python
+        shell: bash
+        run: mise exec --locked -- node test/consume-tools.mjs
+      - name: Consume locked NuGet dependency
+        shell: bash
+        run: |
+          dotnet restore fixtures/nuget/Fixture.csproj --locked-mode
+          dotnet run --project fixtures/nuget/Fixture.csproj --no-restore --configuration Release
+      - name: Consume safe-settings and native Probot lock
+        shell: bash
+        run: |
+          target=$(mise exec --locked -- node test/consume-upstream.mjs prepare-settings)
+          mise exec --locked -- npm --prefix "$target" ci --ignore-scripts --no-audit --no-fund
+          mise exec --locked -- node test/consume-upstream.mjs verify-settings "$target"
+      - name: Consume pinned Renovate image
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          image=$(mise exec --locked -- node test/consume-upstream.mjs image)
+          version=${image#*:}
+          version=${version%@*}
+          actual=$(docker run --rm --network none --entrypoint renovate "$image" --version)
+          test "$actual" = "$version"
+          printf 'Renovate image version=%s result=PASS\n' "$actual"
+      - name: Preserve source and locks
+        shell: bash
+        run: |
+          git diff --exit-code
+          git rev-parse HEAD
