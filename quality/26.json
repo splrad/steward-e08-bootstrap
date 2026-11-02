@@ -43,9 +43,16 @@
       },
       "configVersion": "e08-native-independent-v1",
       "result": null,
-      "attempts": [],
-      "nextCheckAt": null,
-      "errorCode": null
+      "attempts": [
+        {
+          "startedAt": "2026-11-02T05:34:30.370Z",
+          "status": "UNKNOWN",
+          "model": null,
+          "usage": null
+        }
+      ],
+      "nextCheckAt": "2026-11-02T05:35:30.370Z",
+      "errorCode": "RESPONSE_UNKNOWN"
     },
     "a17f187f9e589f0580bc154757398d128926cb6ea6073b93c15e06824b5bbfcc": {
       "key": "a17f187f9e589f0580bc154757398d128926cb6ea6073b93c15e06824b5bbfcc",
@@ -62,9 +69,16 @@
       },
       "configVersion": "e08-native-independent-v1",
       "result": null,
-      "attempts": [],
-      "nextCheckAt": null,
-      "errorCode": null
+      "attempts": [
+        {
+          "startedAt": "2026-11-02T05:34:30.370Z",
+          "status": "UNKNOWN",
+          "model": null,
+          "usage": null
+        }
+      ],
+      "nextCheckAt": "2026-11-02T05:35:30.370Z",
+      "errorCode": "RESPONSE_UNKNOWN"
     },
     "e88d66aa712c0c9118a187b6551e15f353a3f797ff052c3f645d836cc47e657d": {
       "key": "e88d66aa712c0c9118a187b6551e15f353a3f797ff052c3f645d836cc47e657d",
@@ -81,9 +95,16 @@
       },
       "configVersion": "e08-native-independent-v1",
       "result": null,
-      "attempts": [],
-      "nextCheckAt": null,
-      "errorCode": null
+      "attempts": [
+        {
+          "startedAt": "2026-11-02T05:34:30.370Z",
+          "status": "UNKNOWN",
+          "model": null,
+          "usage": null
+        }
+      ],
+      "nextCheckAt": "2026-11-02T05:35:30.370Z",
+      "errorCode": "RESPONSE_UNKNOWN"
     }
   },
   "cursor": 0
