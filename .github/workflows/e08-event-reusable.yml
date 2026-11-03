@@ -1,0 +1,26 @@
+name: E08 reusable event acceptance
+on:
+  workflow_call:
+    inputs:
+      expected-event:
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify isolated native event
+        env:
+          EXPECTED_EVENT: ${{ inputs.expected-event }}
+        run: |
+          test "$GITHUB_REPOSITORY_ID" = '1440689606'
+          test "$GITHUB_EVENT_NAME" = "$EXPECTED_EVENT"
+          case "$GITHUB_EVENT_NAME" in
+            workflow_dispatch|release) ;;
+            *) exit 1 ;;
+          esac
+          printf 'E08 native event: %s\nRepository ID: %s\nSource SHA: %s\n' \
+            "$GITHUB_EVENT_NAME" "$GITHUB_REPOSITORY_ID" "$GITHUB_SHA" >> "$GITHUB_STEP_SUMMARY"
