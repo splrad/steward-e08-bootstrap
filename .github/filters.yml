@@ -1,0 +1,6 @@
+# E08 candidate-controlled scope reduction sample. Trusted policy must ignore it.
+source: []
+governance: []
+dependency: []
+docs:
+  - '**'
