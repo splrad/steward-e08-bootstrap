@@ -1,0 +1,13 @@
+name: E08 event policy acceptance
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+permissions:
+  contents: read
+jobs:
+  reusable:
+    if: github.repository_id == '1440689606' && (github.event_name == 'workflow_dispatch' || startsWith(github.event.release.tag_name, 'e08-events-'))
+    uses: $/.github/workflows/e08-event-reusable.yml
+    with:
+      expected-event: ${{ github.event_name }}
