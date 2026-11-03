@@ -15,10 +15,12 @@ workflows:
         - 'actions/labeler@bf12e9b00b37c5c0ca2b87b79b2daf7891dbda13'
     '.github/workflows/pr-title.yml':
         - 'amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50'
+    '.github/workflows/release.yml': []
     '.github/workflows/settings-sync.yml':
         - 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1'
     '.github/workflows/steward-release-channels.yml': []
     '.github/workflows/steward-release-publish.yml': []
+    '.github/workflows/sync-managed.yml': []
 dependencies:
     'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1':
         ref: 'v7.0.1'
