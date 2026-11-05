@@ -30,7 +30,7 @@ jobs:
           MISE_SAFE: '1'
           MISE_NODE_COMPILE: 'false'
         with:
-          version: 2026.10.24
+          version: 2026.11.2
           install_args: --locked
           env: false
           cache: false
