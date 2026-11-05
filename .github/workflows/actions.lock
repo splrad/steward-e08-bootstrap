@@ -6,7 +6,7 @@ workflows:
     '.github/workflows/e08-dependency-consumers.yml':
         - 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1'
         - 'actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73'
-        - 'jdx/mise-action@6be3c7ed4c21d4f76b208d351d95aac273ebb76d'
+        - 'jdx/mise-action@f5be966e4a917d54244728e6a5fdcd1d93a35e6c'
     '.github/workflows/e08-event-policy.yml': []
     '.github/workflows/e08-event-reusable.yml': []
     '.github/workflows/e08-runtime.yml': []
@@ -42,8 +42,8 @@ dependencies:
         commit: 'sha1-48f256284bd46cdaab1048c3721360e808335d50'
         owner_id: 4038316
         repo_id: 220418983
-    'jdx/mise-action@6be3c7ed4c21d4f76b208d351d95aac273ebb76d':
-        ref: 'v5.2.4'
-        commit: 'sha1-6be3c7ed4c21d4f76b208d351d95aac273ebb76d'
+    'jdx/mise-action@f5be966e4a917d54244728e6a5fdcd1d93a35e6c':
+        ref: 'v5.2.6'
+        commit: 'sha1-f5be966e4a917d54244728e6a5fdcd1d93a35e6c'
         owner_id: 216188
         repo_id: 738284564
