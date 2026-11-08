@@ -1,0 +1,1 @@
+E08 isolated event-policy sample. The title workflow is permitted; pull_request_target at other paths is denied.
