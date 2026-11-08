@@ -1,31 +1,14 @@
 name: E08 / sync-managed.yml health acceptance
 on:
   workflow_dispatch:
-    inputs:
-      hold_business:
-        description: 'Fixture only: hold synthetic business for 180 seconds'
-        type: boolean
-        default: false
-      hold_health:
-        description: 'Fixture only: hold health lock for 90 seconds'
-        type: boolean
-        default: false
 permissions: {}
 jobs:
   business-fixture:
     if: github.repository == 'splrad/steward-e08-bootstrap' && github.repository_id == '1440689606' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 2
     permissions: {}
     steps:
-      - name: D04 business window
-        if: inputs.hold_business == true
-        shell: bash
-        run: |
-          set -euo pipefail
-          printf 'D04 business begin run=%s attempt=%s utc=%s\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$(date -u +%FT%TZ)"
-          sleep 180
-          printf 'D04 business end run=%s attempt=%s utc=%s\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$(date -u +%FT%TZ)"
       - name: Record isolated business attempt
         shell: bash
         env:
@@ -45,14 +28,6 @@ jobs:
       group: steward-automation-health
       cancel-in-progress: false
     steps:
-      - name: D04 health window
-        if: inputs.hold_health == true
-        shell: bash
-        run: |
-          set -euo pipefail
-          printf 'D04 health begin run=%s attempt=%s utc=%s\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$(date -u +%FT%TZ)"
-          sleep 90
-          printf 'D04 health end run=%s attempt=%s utc=%s\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$(date -u +%FT%TZ)"
       - name: automation-health-native
         shell: bash
         env:
